@@ -10,7 +10,7 @@ const Footer = () => {
           <p>
             Lustria
             <br />
-            Providing reliable service since 1992
+            Providing reliable service for you!
           </p>
         </aside>
         <nav>
