@@ -66,7 +66,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="my-8">
+    <div className="pt-6">
       <h1 className="flex justify-center text-[#111111] sm:text-3xl text-xl font-bold p-2">
         Product and Category Management
       </h1>

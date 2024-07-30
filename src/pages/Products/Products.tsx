@@ -6,7 +6,6 @@ import Card from "../../components/ul/Card";
 import ReactPaginate from "react-paginate";
 import categoryApi from "../../redux/features/products/categoryApi";
 import debounce from "debounce";
-import Carousel from "../../components/ul/Carousel";
 
 export type TProduct = {
   _id: string;
@@ -68,12 +67,14 @@ const Products = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-[#597E52] mb-6">Products Store</h1>
+      <h2 className="p-4 text-3xl font-extrabold mb-4 text-[#597E52]">
+        Products
+      </h2>
       <div className="flex justify-between">
         <input
           onChange={handleSearch}
           type="text"
-          placeholder="Search here"
+          placeholder="Search desired product here"
           className="input input-bordered  w-full max-w-xs mb-5"
         />
         <div className="flex">
@@ -188,7 +189,7 @@ const Products = () => {
             ? " py-4"
             : ""
         }`}
-        activeLinkClassName="bg-blue-500"
+        activeLinkClassName="bg-[#597E52]"
         forcePage={page - 1}
       />
     </div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 import Logo from "../../assets/images/logo.png";
 
 const Header = () => {
@@ -38,7 +37,7 @@ const Header = () => {
             <ul
               onClick={menuClick}
               tabIndex={0}
-              className={`menu menu-sm dropdown-content bg-white-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${
+              className={`menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow ${
                 click ? "hidden" : ""
               }`}
             >
@@ -50,21 +49,9 @@ const Header = () => {
               <li className="text-base text-[#111111] mb-2">
                 <Link to="/products">Products</Link>
               </li>
-              <li className="text-base text-[#111111] mb-2">
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
+
               <li className="text-base text-[#111111] mb-2">
                 <Link to="/cart">Cart</Link>
-              </li>
-              <li className="text-base text-[#111111] mb-2">
-                <ScrollLink to="category" smooth={true} duration={500}>
-                  Category
-                </ScrollLink>
-              </li>
-              <li className="text-base text-[#111111] mb-2">
-                <ScrollLink to="gallery" smooth={true} duration={500}>
-                  Image Gallery
-                </ScrollLink>
               </li>
             </ul>
           </div>
@@ -88,15 +75,8 @@ const Header = () => {
             <li className="text-base text-[#111111] mr-8">
               <Link to="/cart">Cart</Link>
             </li>
-            <li className="text-base text-[#111111] mr-8">
-              <ScrollLink to="category" smooth={true} duration={500}>
-                Category
-              </ScrollLink>
-            </li>
-            <li className="text-base text-[#111111]">
-              <ScrollLink to="gallery" smooth={true} duration={500}>
-                Image Gallery
-              </ScrollLink>
+            <li className="text-base text-[#111111] mb-2">
+              <Link to="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </div>
