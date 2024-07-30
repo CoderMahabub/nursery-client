@@ -75,7 +75,7 @@ const Dashboard = () => {
         <div className="flex justify-end mt-4">
           <button
             onClick={handlerAddProduct}
-            className="btn bg-[#0080ff] text-white sm:text-xl font-bold hover:text-[#111111]"
+            className="btn bg-[#597E52] text-white sm:text-xl font-bold hover:bg-black"
           >
             Add Product
           </button>
@@ -87,7 +87,7 @@ const Dashboard = () => {
             <table className="table">
               {/* head */}
               <thead>
-                <tr>
+                <tr className="text-1xl text-black font-extrabold">
                   <th>
                     <label>
                       <input type="checkbox" className="checkbox" />
@@ -101,13 +101,13 @@ const Dashboard = () => {
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="text-black">
                 {/* row 1 */}
                 {data?.data?.map((product: TProduct) => (
                   <tr key={product?._id}>
                     <th>
                       <label>
-                        <input type="checkbox" className="checkbox" />
+                        <input type="checkbox" className="checkbox bg-white" />
                       </label>
                     </th>
                     <td>
@@ -125,7 +125,7 @@ const Dashboard = () => {
                     <th>
                       <button
                         onClick={() => handlerUpdate(product?._id)}
-                        className="btn bg-[#0080ff]"
+                        className="btn bg-[#597E52] text-white"
                       >
                         <FaEdit />
                       </button>
@@ -133,7 +133,7 @@ const Dashboard = () => {
                     <th>
                       <button
                         onClick={() => handlerDelete(product?._id)}
-                        className="btn btn-error"
+                        className="btn text-white btn-error"
                       >
                         <FaTrash />
                       </button>

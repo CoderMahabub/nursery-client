@@ -6,6 +6,7 @@ import Card from "../../components/ul/Card";
 import ReactPaginate from "react-paginate";
 import categoryApi from "../../redux/features/products/categoryApi";
 import debounce from "debounce";
+import Carousel from "../../components/ul/Carousel";
 
 export type TProduct = {
   _id: string;
@@ -66,8 +67,8 @@ const Products = () => {
   }
 
   return (
-    <div className="mt-6">
-      <h1 className="text-5xl font-bold text-[#111111] mb-6">Products</h1>
+    <div>
+      <h1 className="text-5xl font-bold text-[#597E52] mb-6">Products Store</h1>
       <div className="flex justify-between">
         <input
           onChange={handleSearch}
@@ -80,7 +81,7 @@ const Products = () => {
             <div
               tabIndex={0}
               onClick={menuClick}
-              className="btn m-1 bg-[#7dbffc] text-white sm:text-xl font-bold"
+              className="btn mr-1 text-xl font-normal bg-[#597E52] text-white hover:bg-black"
             >
               Sort by
             </div>
@@ -114,7 +115,7 @@ const Products = () => {
             <div
               tabIndex={0}
               onClick={menuClick}
-              className="btn m-1 bg-[#0080ff] text-white sm:text-xl font-bold"
+              className="btn text-xl font-normal bg-black text-white hover:bg-[#597E52]"
             >
               Filter by
             </div>
@@ -142,7 +143,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
         {data?.data?.map((product: TProduct) => (
           <Card
             title={product?.title}

@@ -37,7 +37,7 @@ const Card = ({
 
   return (
     <div
-      className={`card card-compact bg-base-100 w-full ${
+      className={`card card-compact bg-[#FFFFEC] w-full text-black ${
         description ? "" : "shadow-xl"
       }`}
     >
@@ -53,31 +53,31 @@ const Card = ({
           <input
             type="radio"
             name="rating-4"
-            className="mask mask-star-2 bg-[#0080ff]"
+            className="mask mask-star-2 bg-[#597E52]"
             defaultChecked={rating === 1 ? true : false}
           />
           <input
             type="radio"
             name="rating-4"
-            className="mask mask-star-2 bg-[#0080ff]"
+            className="mask mask-star-2 bg-[#597E52]"
             defaultChecked={rating === 2 ? true : false}
           />
           <input
             type="radio"
             name="rating-4"
-            className="mask mask-star-2 bg-[#0080ff]"
+            className="mask mask-star-2 bg-[#597E52]"
             defaultChecked={rating === 3 ? true : false}
           />
           <input
             type="radio"
             name="rating-4"
-            className="mask mask-star-2 bg-[#0080ff]"
+            className="mask mask-star-2 bg-[#597E52]"
             defaultChecked={rating === 4 ? true : false}
           />
           <input
             type="radio"
             name="rating-4"
-            className="mask mask-star-2 bg-[#0080ff]"
+            className="mask mask-star-2 bg-[#597E52]"
             defaultChecked={rating === 5 ? true : false}
           />
         </div>
@@ -88,14 +88,14 @@ const Card = ({
           ) : (
             <button
               onClick={() => navigate(`/product/${_id}`)}
-              className="btn text-xl font-bold bg-[#9fc8f0] text-white hover:text-[#111111]"
+              className="btn text-xl font-normal bg-black text-white hover:bg-[#597E52]"
             >
               See Details
             </button>
           )}
           <button
             onClick={handleCart}
-            className="btn text-xl font-bold bg-[#0080ff] text-white hover:text-[#111111]"
+            className="btn text-xl font-normal bg-[#597E52] text-white hover:bg-black"
           >
             Add to Cart
           </button>
