@@ -26,7 +26,7 @@ const Products = () => {
   const [search, setSearch] = useState("");
 
   const query = {
-    limit: 9,
+    limit: 8,
     sort,
     category: filter,
     searchTerm: search,
