@@ -141,19 +141,6 @@ const Dashboard = () => {
                   </tr>
                 ))}
               </tbody>
-              {/* foot */}
-              <tfoot>
-                <tr>
-                  <th></th>
-                  <th>Image</th>
-                  <th>Title</th>
-                  <th>Price</th>
-                  <th>Category</th>
-                  <th>Actions</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </div>

@@ -75,9 +75,6 @@ const Header = () => {
             <li className="text-base text-[#111111] mr-8">
               <Link to="/cart">Cart</Link>
             </li>
-            <li className="text-base text-[#111111] mb-2">
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
           </ul>
         </div>
       </div>
