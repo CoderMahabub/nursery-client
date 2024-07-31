@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from "react";
-import productApi from "../../redux/features/products/productApi";
-import { toast } from "react-toastify";
-import { TProduct } from "../Products/Products";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Modal from "../../components/ul/Modal";
 import ProductModal from "../../components/ul/ProductModal";
+import { TProduct } from "../Products/Products";
+import { toast } from "react-toastify";
+import productApi from "../../redux/features/products/productApi";
+import { useState } from "react";
 
 const Dashboard = () => {
   const [id, setId] = useState("");
@@ -66,7 +66,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="pt-6">
+    <div className="my-8">
       <h1 className="flex justify-center text-[#111111] sm:text-3xl text-xl font-bold p-2">
         Product and Category Management
       </h1>
@@ -75,7 +75,7 @@ const Dashboard = () => {
         <div className="flex justify-end mt-4">
           <button
             onClick={handlerAddProduct}
-            className="btn bg-[#597E52] text-white sm:text-xl font-bold hover:bg-black"
+            className="btn bg-[#0080ff] text-white sm:text-xl font-bold hover:text-[#111111]"
           >
             Add Product
           </button>
@@ -87,7 +87,7 @@ const Dashboard = () => {
             <table className="table">
               {/* head */}
               <thead>
-                <tr className="text-1xl text-black font-extrabold">
+                <tr>
                   <th>
                     <label>
                       <input type="checkbox" className="checkbox" />
@@ -101,13 +101,13 @@ const Dashboard = () => {
                   <th></th>
                 </tr>
               </thead>
-              <tbody className="text-black">
+              <tbody>
                 {/* row 1 */}
                 {data?.data?.map((product: TProduct) => (
                   <tr key={product?._id}>
                     <th>
                       <label>
-                        <input type="checkbox" className="checkbox bg-white" />
+                        <input type="checkbox" className="checkbox" />
                       </label>
                     </th>
                     <td>
@@ -125,7 +125,7 @@ const Dashboard = () => {
                     <th>
                       <button
                         onClick={() => handlerUpdate(product?._id)}
-                        className="btn bg-[#597E52] text-white"
+                        className="btn bg-[#0080ff]"
                       >
                         <FaEdit />
                       </button>
@@ -133,7 +133,7 @@ const Dashboard = () => {
                     <th>
                       <button
                         onClick={() => handlerDelete(product?._id)}
-                        className="btn text-white btn-error"
+                        className="btn btn-error"
                       >
                         <FaTrash />
                       </button>
@@ -141,6 +141,19 @@ const Dashboard = () => {
                   </tr>
                 ))}
               </tbody>
+              {/* foot */}
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th>Image</th>
+                  <th>Title</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Actions</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </tfoot>
             </table>
           </div>
         </div>
